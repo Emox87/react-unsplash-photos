@@ -1,8 +1,8 @@
-import React from "react";
-
 const ImageList = (props) => {
   const images = props.images.map((image) => (
-    <img src={image.urls.regular} key={image.urls.regular} />
+    <div key={image.id}>
+      <img src={image.urls.regular} alt={image.alt_description} />
+    </div>
   ));
   return <div>{images}</div>;
 };
